@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>  
+<body>
+  <form>
+      <div>
+        <div class='container'>
+          <h2 class="center">HOSPITAL REGISTRATION</h2>
+          <div fxLayout = "column" fxLayoutGap = "20px">
+            <div fxLayout = "column" fxLayoutGap = "20px" fxLayoutAlign = "none center">
+              <input type="text" name="Name of the Hospital" placeholder= "Name of the Hospital" required/> 
+              <input type="text" name="Hospital Registration ID" placeholder="Hospital Registration ID" required /> 
+            </div>
+            <div class = "row" fxLayout.xs="column" fxLayout = "row" fxLayoutGap.xs = "20px" fxLayoutAlign.xs = "none center" fxLayoutGap = "20px" fxLayoutAlign = "center center">
+              <input type="text" name="Address" placeholder="Address" required/>  
+              <input type="text" name="Phone Number" placeholder="Phone Number" size="10" required /> 
+            </div>
+           </div> 
+          <h2 class="center">AVAILABILITIES</h2>
+        <div class="beds" [ngStyle.xs]="{'font-size.vw': 3}" fxLayout.xs = "column" fxLayout = "row" fxLayoutGap = "15px" fxLayoutAlign="space-evenly none">
+          <div id="icubeds">
+            <span [ngStyle.xs]="{'font-size.vw': 3.3}">ICU</span>
+            <input name="ICU" type="checkbox" class = "icu" value="ICU" checked />
+          </div>
+          <div id="obeds">
+            <span [ngStyle.xs]="{'font-size.vw': 3.3}">Oxygen Beds</span>
+            <input type="checkbox" name="Oxygen Beds" class = "obed" value="Oxygen Beds" />
+          </div>
+          <div id="nbeds">
+            <span [ngStyle.xs]="{'font-size.vw': 3.3}">Normal Beds</span>
+            <input type="checkbox" class = "nbed" name="Normal Beds" value="Normal Beds" />
+          </div>
+          </div>
+        <br><br>
+        <div fxLayout.xs = "column" fxLayout = "row">
+          <button type="submit" class="registerbtn">REGISTER</button> 
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
+
